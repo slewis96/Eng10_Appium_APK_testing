@@ -8,7 +8,8 @@ def opts
     caps: {
       "app": "app/colorNote.apk",
       "deviceName": "emulator",
-      "platformName": "android"
+      "platformName": "android",
+      "autoGrantPermissions": true
     }
   }
 end
