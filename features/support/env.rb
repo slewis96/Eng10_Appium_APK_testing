@@ -3,6 +3,7 @@ require 'cucumber'
 require 'rspec'
 require_relative '../../lib/note_app.rb'
 
+
 def opts
   {
     caps: {
