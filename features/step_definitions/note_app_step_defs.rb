@@ -12,3 +12,52 @@ end
 Then("the note is saved") do
   expect(homepage.check_new_note).to eq @title
 end
+
+When("Fill it in blank and save") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+
+Then("the note is saved with no title") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Given("I add a note") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When("I return to notes") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then("the three notes are present") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When("I click on the note") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When("I change the title") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When("I click save") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then("the new title is displayed") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When("I click delete") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then("the note is not present") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then("the note will not save") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
