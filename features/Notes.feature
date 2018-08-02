@@ -38,11 +38,11 @@ Feature: Notes
     When I click on the note
     And I click delete
     Then the note is not present
-    
+
   # cancel note
   @cancelnote
   Scenario: Cancel note creation
     Given I click to add a note
     When I change the title
     And I click delete
-    Then the note will not save
+    Then the note is not present

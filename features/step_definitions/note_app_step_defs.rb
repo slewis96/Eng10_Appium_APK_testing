@@ -51,13 +51,9 @@ Then("the new title is displayed") do
 end
 
 When("I click delete") do
-  pending # Write code here that turns the phrase above into concrete actions
+  homepage.delete_note
 end
 
 Then("the note is not present") do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then("the note will not save") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(homepage.check_delete_note).to eq false
 end

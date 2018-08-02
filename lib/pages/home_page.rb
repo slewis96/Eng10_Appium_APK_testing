@@ -23,4 +23,13 @@ class HomePage
   def click_note
     $driver.find_element(:id, "com.trantrigroup.note:id/text1").click
   end
+
+  def delete_note
+    $driver.find_element(:id, 'com.trantrigroup.note:id/menu_delete').click
+    $driver.find_element(:id, 'android:id/button1').click
+  end
+
+  def check_delete_note
+    $driver.find_element(:id, 'com.trantrigroup.note:id/text1').displayed?
+  end
 end
