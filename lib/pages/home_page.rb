@@ -20,4 +20,7 @@ class HomePage
     element = $driver.find_element(:id, "com.trantrigroup.note:id/text1")
     return element.text
   end
+  def click_note
+    $driver.find_element(:id, "com.trantrigroup.note:id/text1").click
+  end
 end
