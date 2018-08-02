@@ -1,5 +1,5 @@
 Feature: Notes
-
+  # add note
   @addnote @validnote
   Scenario: Adding a note
     Given I click to add a note
@@ -13,6 +13,7 @@ Feature: Notes
     When Fill it in blank and save
     Then the note is saved with no title
 
+  # add notes
   @addnote @addmultiplenotes
   Scenario: Adding three notes
     Given I add a note
@@ -37,7 +38,8 @@ Feature: Notes
     When I click on the note
     And I click delete
     Then the note is not present
-
+    
+  # cancel note
   @cancelnote
   Scenario: Cancel note creation
     Given I click to add a note
