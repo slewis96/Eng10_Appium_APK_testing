@@ -16,9 +16,7 @@ Feature: Notes
   # add notes
   @addnote @addmultiplenotes
   Scenario: Adding three notes
-    Given I add a note
-    And I add a note
-    And I add a note
+    Given I add three notes
     When I return to notes
     Then the three notes are present
 
@@ -38,7 +36,7 @@ Feature: Notes
     When I click on the note
     And I click delete
     Then the note is not present
-    
+
   # cancel note
   @cancelnote
   Scenario: Cancel note creation
