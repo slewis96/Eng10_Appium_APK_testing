@@ -14,50 +14,66 @@ Then("the note is saved") do
 end
 
 When("Fill it in blank and save") do
-  pending # Write code here that turns the phrase above into concrete actions
+  homepage.input_title("")
+  homepage.save_and_back
 end
 
-
 Then("the note is saved with no title") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(homepage.check_new_note).to eq "No Title"
+end
+
+Given("I add three notes") do
+  homepage.click_add_note
+  homepage.input_title(@title1)
+  homepage.input_text("test#{rand(100)}")
+  homepage.save_and_back
+  homepage.click_add_note
+  homepage.input_title(@title2)
+  homepage.input_text("test#{rand(100)}")
+  homepage.save_and_back
+  homepage.click_add_note
+  homepage.input_title(@title3)
+  homepage.input_text("test#{rand(100)}")
+  homepage.save_and_back
 end
 
 Given("I add a note") do
-  pending # Write code here that turns the phrase above into concrete actions
+  homepage.click_add_note
+  homepage.input_title(@title)
+  homepage.input_text("test#{rand(100)}")
+  homepage.save_and_back
 end
 
 When("I return to notes") do
-  pending # Write code here that turns the phrase above into concrete actions
+
 end
 
 Then("the three notes are present") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(homepage.check_multiple_notes).to include(@title1)
+  expect(homepage.check_multiple_notes).to include(@title2)
+  expect(homepage.check_multiple_notes).to include(@title3)
 end
 
 When("I click on the note") do
-  pending # Write code here that turns the phrase above into concrete actions
+  homepage.click_note
 end
 
 When("I change the title") do
-  pending # Write code here that turns the phrase above into concrete actions
+  homepage.input_title "New Title"
 end
 
 When("I click save") do
-  pending # Write code here that turns the phrase above into concrete actions
+  homepage.save_and_back
 end
 
 Then("the new title is displayed") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(homepage.check_new_note).to eq "New Title"
 end
 
 When("I click delete") do
-  pending # Write code here that turns the phrase above into concrete actions
+  homepage.delete_note
 end
 
 Then("the note is not present") do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then("the note will not save") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(homepage.check_delete_note).to eq false
 end

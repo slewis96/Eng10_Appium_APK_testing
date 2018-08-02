@@ -20,4 +20,30 @@ class HomePage
     element = $driver.find_element(:id, "com.trantrigroup.note:id/text1")
     return element.text
   end
+
+  def check_multiple_notes
+    notes = []
+    elements = $driver.find_elements(:id, "com.trantrigroup.note:id/text1")
+    for element in elements do
+      notes << element.text
+    end
+    return notes
+  end
+
+  def click_note
+    $driver.find_element(:id, "com.trantrigroup.note:id/text1").click
+  end
+
+  def delete_note
+    $driver.find_element(:id, 'com.trantrigroup.note:id/menu_delete').click
+    $driver.find_element(:id, 'android:id/button1').click
+  end
+
+  def check_delete_note
+    begin
+      return $driver.find_element(:id, 'com.trantrigroup.note:id/text1')
+    rescue Exception
+      return false
+    end
+  end
 end
