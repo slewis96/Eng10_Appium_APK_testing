@@ -14,12 +14,12 @@ Then("the note is saved") do
 end
 
 When("Fill it in blank and save") do
-  pending # Write code here that turns the phrase above into concrete actions
+  homepage.input_title("")
+  homepage.save_and_back
 end
 
-
 Then("the note is saved with no title") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(homepage.check_new_note).to eq "No Title"
 end
 
 Given("I add three notes") do
@@ -55,19 +55,19 @@ Then("the three notes are present") do
 end
 
 When("I click on the note") do
-  pending # Write code here that turns the phrase above into concrete actions
+  homepage.click_note
 end
 
 When("I change the title") do
-  pending # Write code here that turns the phrase above into concrete actions
+  homepage.input_title "New Title"
 end
 
 When("I click save") do
-  pending # Write code here that turns the phrase above into concrete actions
+  homepage.save_and_back
 end
 
 Then("the new title is displayed") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(homepage.check_new_note).to eq "New Title"
 end
 
 When("I click delete") do

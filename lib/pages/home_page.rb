@@ -20,6 +20,7 @@ class HomePage
     element = $driver.find_element(:id, "com.trantrigroup.note:id/text1")
     return element.text
   end
+
   def check_multiple_notes
     notes = []
     elements = $driver.find_elements(:id, "com.trantrigroup.note:id/text1")
@@ -29,11 +30,8 @@ class HomePage
     return notes
   end
 
-
-
-
-
-
-
+  def click_note
+    $driver.find_element(:id, "com.trantrigroup.note:id/text1").click
+  end
 
 end
