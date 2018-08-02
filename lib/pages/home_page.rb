@@ -41,7 +41,8 @@ class HomePage
 
   def check_delete_note
     begin
-      return $driver.find_element(:id, 'com.trantrigroup.note:id/text1')
+      $driver.find_element(:id, 'com.trantrigroup.note:id/text1')
+      return true
     rescue Exception
       return false
     end
