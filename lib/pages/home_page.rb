@@ -5,7 +5,7 @@ class HomePage
   end
 
   def find_add
-    $driver.find_element(:id, "com.socialnmobile.dictapps.notepad.color.note:id/empty_text")
+    return $driver.find_elements(:id, "com.socialnmobile.dictapps.notepad.color.note:id/main_btn1")
     # com.socialnmobile.dictapps.notepad.color.note:id/empty
     # com.socialnmobile.dictapps.notepad.color.note:id/img_add
     # /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.RelativeLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ImageView
@@ -13,7 +13,7 @@ class HomePage
   end
   def click_add_note
     find_add.click
-    $driver.find_element(:id, "com.socialnmobile.dictapps.notepad.color.note:id/text").click
+    $driver.find_elements(:xpath, "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[1]").click
   end
 
   def notepage
