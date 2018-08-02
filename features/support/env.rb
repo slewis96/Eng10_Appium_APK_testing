@@ -6,7 +6,7 @@ require_relative '../../lib/note_app.rb'
 def opts
   {
     caps: {
-      "app": "app/colorNote.apk",
+      "app": "app/classicnote.apk",
       "deviceName": "emulator",
       "platformName": "android",
       "autoGrantPermissions": true

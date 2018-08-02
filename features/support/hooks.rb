@@ -1,6 +1,5 @@
 Before do
   $driver.start_driver
-  homepage.click_skip
 end
 Before "@addnote" do
   @title = "title#{rand(100)}"
