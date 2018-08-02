@@ -1,7 +1,7 @@
 Before do
   $driver.start_driver
 end
-Before "@addnote" do
+Before("@addnote or @editnote or @deletenote") do
   @title = "title#{rand(100)}"
 end
 Before "@addmultiplenotes" do
